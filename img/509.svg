@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:ffdec="https://www.free-decompiler.com/flash" xmlns:xlink="http://www.w3.org/1999/xlink" ffdec:objectType="frame" height="100.35px" width="100.0px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1.0, 0.0, 0.0, 1.0, 0.3, 0.15)">
+    <filter id="filter17">
+      <feColorMatrix in="SourceGraphic" result="filterResult41" type="matrix" values="1.010069 0.03840011 -0.048469093 0.0 0.0 -0.007192129 0.9922824 0.014909752 0.0 0.0 0.041480314 -0.03644031 0.99495995 0.0 0.0 0.0 0.0 0.0 1.0 0.0"/>
+    </filter>
+    <use ffdec:characterId="46" filter="url(#filter17)" height="120.95" transform="matrix(0.8306, 0.0, 0.0, 0.8296, -0.3236, -0.1591)" width="120.45" xlink:href="#sprite0"/>
+    <use ffdec:characterId="47" height="29.1" transform="matrix(1.0, 0.0, 0.0, 1.0, 14.85, 5.0)" width="45.95" xlink:href="#shape10"/>
+  </g>
+  <defs>
+    <g id="sprite0" transform="matrix(1.0, 0.0, 0.0, 1.0, 27.6, 19.9)">
+      <use ffdec:characterId="45" height="177.9" transform="matrix(0.68, 0.0, 0.0, 0.68, -27.5776, -19.9237)" width="177.1" xlink:href="#sprite1"/>
+    </g>
+    <g id="sprite1" transform="matrix(1.0, 0.0, 0.0, 1.0, 49.6, 39.3)">
+      <use ffdec:characterId="43" height="177.9" transform="matrix(1.0, 0.0, 0.0, 1.0, -49.6, -39.3)" width="177.1" xlink:href="#sprite2"/>
+      <use ffdec:characterId="44" height="78.35" transform="matrix(1.0, 0.0, 0.0, 1.0, 6.95, 8.6)" width="75.9" xlink:href="#shape9"/>
+    </g>
+    <g id="sprite2" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.05, 0.0)">
+      <filter id="filter13">
+        <feColorMatrix in="SourceGraphic" result="filterResult37" type="matrix" values="-5.480007 8.750468 -0.6704603 0.0 -0.39843145 1.4567972 0.0593817 1.083821 0.0 -0.3984314 2.8040156 6.6789384 -6.8829546 0.0 -0.39843142 0.0 0.0 0.0 1.0 0.0"/>
+      </filter>
+      <use ffdec:characterId="40" filter="url(#filter13)" height="168.65" transform="matrix(1.0, 0.0, 0.0, 1.0, 16.6, 0.0)" width="160.45" xlink:href="#sprite3"/>
+      <filter id="filter14">
+        <feConvolveMatrix divisor="100.0" in="SourceGraphic" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="10 10" result="filterResult38"/>
+      </filter>
+      <use ffdec:characterId="42" filter="url(#filter14)" height="42.85" transform="matrix(-2.2808, 2.5916, 2.3089, 2.0314, 77.7616, 5.7233)" width="32.85" xlink:href="#sprite16"/>
+      <filter id="filter15">
+        <feConvolveMatrix divisor="100.0" in="SourceGraphic" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="10 10" result="filterResult39"/>
+      </filter>
+      <use ffdec:characterId="42" filter="url(#filter15)" height="42.85" transform="matrix(-3.4396, -0.2938, -0.2619, 3.0639, 150.7213, 21.8571)" width="32.85" xlink:href="#sprite16"/>
+      <filter id="filter16">
+        <feConvolveMatrix divisor="100.0" in="SourceGraphic" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="10 10" result="filterResult40"/>
+      </filter>
+      <use ffdec:characterId="42" filter="url(#filter16)" height="42.85" transform="matrix(-1.0311, -3.2948, -2.9347, 0.9188, 159.5832, 114.6788)" width="32.85" xlink:href="#sprite16"/>
+    </g>
+    <g id="sprite3" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.75, 0.0)">
+      <use ffdec:characterId="2" height="90.9" transform="matrix(1.4218, 0.0, 0.0, 1.4218, 12.6391, 16.45)" width="91.35" xlink:href="#sprite4"/>
+      <use ffdec:characterId="8" height="76.85" transform="matrix(1.4218, 0.0, 0.0, 1.4218, 13.35, 22.3)" width="84.9" xlink:href="#sprite5"/>
+      <filter id="filter12">
+        <feColorMatrix in="SourceGraphic" result="filterResult34" type="matrix" values="0 0 0 0 0.0,0 0 0 0 0.8,0 0 0 0 1.0,0 0 0 1 0"/>
+        <feConvolveMatrix divisor="25.0" in="filterResult34" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="5 5" result="filterResult35"/>
+        <feComposite in="SourceGraphic" in2="filterResult35" operator="over" result="filterResult36"/>
+      </filter>
+      <use ffdec:characterId="39" filter="url(#filter12)" height="98.75" transform="matrix(1.7079, 0.0, 0.0, 1.7079, -0.7551, 0.0095)" width="93.95" xlink:href="#sprite8"/>
+    </g>
+    <g id="sprite4" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.5, 0.0)">
+      <use ffdec:characterId="1" height="90.9" transform="matrix(1.0, 0.0, 0.0, 1.0, -0.5, 0.0)" width="91.35" xlink:href="#shape0"/>
+    </g>
+    <g id="shape0" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.5, 0.0)">
+      <path d="M90.75 47.7 L90.75 46.45 90.8 47.75 90.75 47.7" fill="url(#gradient0)" fill-rule="evenodd" stroke="none"/>
+      <path d="M88.85 36.7 L89.1 37.5 88.7 36.8 Q88.75 36.7 88.85 36.7" fill="#666666" fill-rule="evenodd" stroke="none"/>
+      <path d="M73.05 17.35 Q85.6 29.85 85.6 47.6 85.6 65.3 73.05 77.85 60.55 90.4 42.8 90.4 25.05 90.4 12.5 77.85 0.0 65.3 0.0 47.6 0.0 29.85 12.5 17.35 25.05 4.8 42.8 4.8 60.55 4.8 73.05 17.35 M70.65 19.75 Q59.1 8.2 42.8 8.2 26.45 8.2 14.9 19.75 3.4 31.25 3.4 47.6 3.4 63.9 14.9 75.45 26.45 86.95 42.8 86.95 59.1 86.95 70.65 75.45 82.15 63.9 82.15 47.6 82.15 31.25 70.65 19.75" fill="url(#gradient1)" fill-rule="evenodd" stroke="none"/>
+      <path d="M70.65 19.75 Q82.15 31.25 82.15 47.6 82.15 63.9 70.65 75.45 59.1 86.95 42.8 86.95 26.45 86.95 14.9 75.45 3.4 63.9 3.4 47.6 3.4 31.25 14.9 19.75 26.45 8.2 42.8 8.2 59.1 8.2 70.65 19.75" fill="url(#gradient2)" fill-rule="evenodd" stroke="none"/>
+      <path d="M32.75 0.1 L31.7 0.45 31.3 0.4 30.05 0.7 30.05 0.65 31.85 0.2 31.9 0.2 32.2 0.15 33.15 0.0 32.75 0.1 M25.5 2.4 Q26.3 1.9 28.0 1.4 26.2 2.05 26.0 2.4 25.0 2.6 23.55 3.15 L21.0 4.2 Q24.05 2.5 25.5 2.4" fill="#cccccc" fill-rule="evenodd" stroke="none"/>
+      <path d="M73.05 17.35 Q85.6 29.85 85.6 47.6 85.6 65.3 73.05 77.85 60.55 90.4 42.8 90.4 25.05 90.4 12.5 77.85 0.0 65.3 0.0 47.6 0.0 29.85 12.5 17.35 25.05 4.8 42.8 4.8 60.55 4.8 73.05 17.35 Z" ffdec:has-small-stroke="true" ffdec:original-stroke-width="1.0" fill="none" stroke="#000066" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.246060926409797"/>
+    </g>
+    <linearGradient gradientTransform="matrix(0.0176, 0.0585, -0.0585, 0.0176, 42.8, 47.6)" gradientUnits="userSpaceOnUse" id="gradient0" spreadMethod="pad" x1="-819.2" x2="819.2">
+      <stop offset="0.0" stop-color="#999999"/>
+      <stop offset="1.0" stop-color="#333333"/>
+    </linearGradient>
+    <linearGradient gradientTransform="matrix(-0.0202, -0.0481, 0.0481, -0.0202, 42.8, 47.6)" gradientUnits="userSpaceOnUse" id="gradient1" spreadMethod="pad" x1="-819.2" x2="819.2">
+      <stop offset="0.0" stop-color="#003399"/>
+      <stop offset="1.0" stop-color="#000066"/>
+    </linearGradient>
+    <radialGradient cx="0" cy="0" gradientTransform="matrix(0.064, 0.0, 0.0, 0.0374, 38.25, 32.9)" gradientUnits="userSpaceOnUse" id="gradient2" r="819.2" spreadMethod="pad">
+      <stop offset="0.0" stop-color="#0099ff"/>
+      <stop offset="1.0" stop-color="#000066"/>
+    </radialGradient>
+    <g id="sprite5" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+      <use ffdec:characterId="3" height="46.55" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.95)" width="84.9" xlink:href="#shape1"/>
+      <filter id="filter0">
+        <feConvolveMatrix divisor="4.0" in="SourceGraphic" kernelMatrix="1 1 1 1" order="2 2" result="filterResult0"/>
+      </filter>
+      <use ffdec:characterId="5" filter="url(#filter0)" height="39.25" transform="matrix(0.7168, 0.0, 0.0, 0.7168, 2.5, 0.0)" width="111.05" xlink:href="#sprite6"/>
+      <filter id="filter1">
+        <feConvolveMatrix divisor="25.0" in="SourceGraphic" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="5 5" result="filterResult1"/>
+      </filter>
+      <use ffdec:characterId="7" filter="url(#filter1)" height="8.2" transform="matrix(0.5302, 0.0, 0.0, 0.5302, 25.2, 3.8)" width="8.2" xlink:href="#sprite7"/>
+      <filter id="filter2">
+        <feConvolveMatrix divisor="25.0" in="SourceGraphic" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="5 5" result="filterResult2"/>
+      </filter>
+      <use ffdec:characterId="7" filter="url(#filter2)" height="8.2" transform="matrix(0.5302, 0.0, 0.0, 0.5302, 67.5, 72.5)" width="8.2" xlink:href="#sprite7"/>
+    </g>
+    <g id="shape1" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, -0.95)">
+      <path d="M84.9 44.0 L84.9 45.35 83.7 45.6 70.0 46.6 55.1 45.4 41.1 43.45 26.35 42.3 11.85 43.3 Q5.4 44.45 0.1 47.5 L0.0 44.0 0.0 43.55 Q0.0 41.65 0.15 39.9 0.65 34.2 2.5 29.1 5.55 20.55 12.4 13.55 24.85 0.95 42.45 0.95 60.0 0.95 72.45 13.55 77.35 18.5 80.35 24.3 L82.1 28.25 Q83.45 31.8 84.15 35.6 84.9 39.65 84.9 44.0" fill="url(#gradient3)" fill-rule="evenodd" stroke="none"/>
+    </g>
+    <linearGradient gradientTransform="matrix(-1.0E-4, -0.0132, 0.028, -1.0E-4, 44.55, 11.05)" gradientUnits="userSpaceOnUse" id="gradient3" spreadMethod="pad" x1="-819.2" x2="819.2">
+      <stop offset="0.1803921568627451" stop-color="#00ccff" stop-opacity="0.050980393"/>
+      <stop offset="1.0" stop-color="#ffffff" stop-opacity="0.3882353"/>
+    </linearGradient>
+    <g id="sprite6" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+      <use ffdec:characterId="4" height="39.25" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)" width="111.05" xlink:href="#shape2"/>
+    </g>
+    <g id="shape2" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+      <path d="M99.15 21.6 Q81.2 3.65 55.8 3.65 30.4 3.65 12.45 21.6 4.4 29.65 0.0 39.25 4.25 27.3 13.8 17.55 31.2 0.0 55.75 0.0 80.25 0.0 97.6 17.55 104.45 24.5 108.6 32.55 110.0 35.25 111.05 38.05 106.7 29.15 99.15 21.6" fill="#ffffff" fill-opacity="0.3882353" fill-rule="evenodd" stroke="none"/>
+    </g>
+    <g id="sprite7" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+      <use ffdec:characterId="6" height="36.45" transform="matrix(0.225, 0.0, 0.0, 0.225, 0.0, 0.0)" width="36.45" xlink:href="#shape3"/>
+    </g>
+    <g id="shape3" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+      <path d="M36.45 18.25 Q36.45 25.8 31.1 31.1 25.8 36.45 18.25 36.45 10.7 36.45 5.35 31.1 0.0 25.8 0.0 18.25 0.0 10.7 5.35 5.35 10.7 0.0 18.25 0.0 25.8 0.0 31.1 5.35 36.45 10.7 36.45 18.25" fill="#ffffff" fill-opacity="0.3882353" fill-rule="evenodd" stroke="none"/>
+    </g>
+    <g id="sprite8" transform="matrix(1.0, 0.0, 0.0, 1.0, 2.55, 2.6)">
+      <filter id="filter5">
+        <feColorMatrix in="SourceGraphic" result="filterResult5" type="matrix" values="0 0 0 0 0.0,0 0 0 0 1.0,0 0 0 0 1.0,0 0 0 1 0"/>
+        <feConvolveMatrix divisor="16.0" in="filterResult5" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="4 4" result="filterResult6"/>
+        <feComposite in="SourceGraphic" in2="filterResult6" operator="over" result="filterResult7"/>
+        <feOffset dx="-0.9749013248110768" dy="7.940375772397778" in="filterResult7" result="filterResult8"/>
+        <feColorMatrix in="filterResult8" result="filterResult9" type="matrix" values="0 0 0 0 0.0,0 0 0 0 0.0,0 0 0 0 0.0,0 0 0 1 0"/>
+        <feConvolveMatrix divisor="100.0" in="filterResult9" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="10 10" result="filterResult10"/>
+        <feColorMatrix in="filterResult10" result="filterResult11" type="matrix" values="1 0 0 0 0,0 1 0 0 0,0 0 1 0 0,0 0 0 0.75 0"/>
+        <feComposite in="filterResult7" in2="filterResult11" operator="over" result="filterResult12"/>
+      </filter>
+      <use ffdec:characterId="12" filter="url(#filter5)" height="96.5" transform="matrix(0.7501, 0.0, 0.0, 0.7501, 5.1874, 10.7874)" width="96.5" xlink:href="#sprite9"/>
+      <use ffdec:characterId="37" height="107.25" style="mix-blend-mode: overlay" transform="matrix(-0.1015, -0.7676, 0.7676, -0.1015, 9.0529, 96.17)" width="114.5" xlink:href="#sprite11"/>
+      <filter id="filter11">
+        <feConvolveMatrix divisor="400.0" in="SourceGraphic" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="20 20" result="filterResult33"/>
+      </filter>
+      <use ffdec:characterId="38" filter="url(#filter11)" height="36.45" transform="matrix(0.754, 0.0, 0.0, 0.754, 27.75, 35.45)" width="36.45" xlink:href="#sprite15"/>
+    </g>
+    <g id="sprite9" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.75, 0.75)">
+      <use ffdec:characterId="9" height="96.5" transform="matrix(1.0, 0.0, 0.0, 1.0, -0.75, -0.75)" width="96.5" xlink:href="#shape4"/>
+      <filter id="filter3">
+        <feConvolveMatrix divisor="25.0" in="SourceGraphic" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="5 5" result="filterResult3"/>
+      </filter>
+      <use ffdec:characterId="11" filter="url(#filter3)" height="12.5" transform="matrix(0.9982, 0.06, -0.06, 0.9982, 14.4842, 12.7464)" width="10.5" xlink:href="#sprite10"/>
+      <filter id="filter4">
+        <feConvolveMatrix divisor="25.0" in="SourceGraphic" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="5 5" result="filterResult4"/>
+      </filter>
+      <use ffdec:characterId="11" filter="url(#filter4)" height="12.5" transform="matrix(0.4278, 0.0257, -0.0257, 0.4278, 26.7147, 8.1414)" width="10.5" xlink:href="#sprite10"/>
+    </g>
+    <g id="shape4" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.75, 0.75)">
+      <path d="M75.65 9.15 L80.4 13.2 Q94.6 26.8 95.0 46.5 95.4 66.2 81.8 80.4 68.2 94.6 48.5 95.0 L40.0 94.5 Q25.65 92.35 14.6 81.8 L13.75 80.95 Q22.2 87.3 32.35 89.25 L42.9 90.1 Q62.6 89.7 76.2 75.5 89.8 61.35 89.4 41.65 89.0 22.55 75.65 9.15" fill="url(#gradient4)" fill-rule="evenodd" stroke="none"/>
+      <path d="M13.75 80.95 Q0.4 67.6 0.0 48.5 -0.4 28.8 13.2 14.6 26.8 0.4 46.5 0.0 59.45 -0.25 70.05 5.55 L61.5 5.0 Q41.8 5.4 28.2 19.6 14.6 33.8 15.0 53.5 15.4 72.6 28.75 85.95 L29.6 86.8 32.35 89.25 Q22.2 87.3 13.75 80.95" fill="url(#gradient5)" fill-rule="evenodd" stroke="none"/>
+      <path d="M70.05 5.55 L75.65 9.15 Q89.0 22.55 89.4 41.65 89.8 61.35 76.2 75.5 62.6 89.7 42.9 90.1 L32.35 89.25 29.6 86.8 28.75 85.95 Q15.4 72.6 15.0 53.5 14.6 33.8 28.2 19.6 41.8 5.4 61.5 5.0 L70.05 5.55" fill="url(#gradient6)" fill-rule="evenodd" stroke="none"/>
+      <path d="M75.65 9.15 L80.4 13.2 Q94.6 26.8 95.0 46.5 95.4 66.2 81.8 80.4 68.2 94.6 48.5 95.0 L40.0 94.5 Q25.65 92.35 14.6 81.8 L13.75 80.95" fill="none" stroke="url(#gradient7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path d="M13.75 80.95 Q0.4 67.6 0.0 48.5 -0.4 28.8 13.2 14.6 26.8 0.4 46.5 0.0 59.45 -0.25 70.05 5.55 L75.65 9.15" fill="none" stroke="url(#gradient8)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+    <linearGradient gradientTransform="matrix(-0.05, 0.001, -0.0011, -0.052, 54.15, 52.25)" gradientUnits="userSpaceOnUse" id="gradient4" spreadMethod="pad" x1="-819.2" x2="819.2">
+      <stop offset="0.0" stop-color="#00ffff" stop-opacity="0.2"/>
+      <stop offset="1.0" stop-color="#0099ff" stop-opacity="0.5294118"/>
+    </linearGradient>
+    <linearGradient gradientTransform="matrix(0.0428, 0.0, 0.0, 0.0545, 35.0, 44.6)" gradientUnits="userSpaceOnUse" id="gradient5" spreadMethod="pad" x1="-819.2" x2="819.2">
+      <stop offset="0.0" stop-color="#0099ff" stop-opacity="0.14901961"/>
+      <stop offset="1.0" stop-color="#0066cc" stop-opacity="0.6784314"/>
+    </linearGradient>
+    <radialGradient cx="0" cy="0" gradientTransform="matrix(-0.0897, 0.0019, -0.0019, -0.0897, 49.0, 49.0)" gradientUnits="userSpaceOnUse" id="gradient6" r="819.2" spreadMethod="pad">
+      <stop offset="0.28627450980392155" stop-color="#00ccff" stop-opacity="0.0"/>
+      <stop offset="1.0" stop-color="#0099ff" stop-opacity="0.5372549"/>
+    </radialGradient>
+    <linearGradient gradientTransform="matrix(-0.0281, -0.0517, 0.0517, -0.0281, 47.5, 47.5)" gradientUnits="userSpaceOnUse" id="gradient7" spreadMethod="pad" x1="-819.2" x2="819.2">
+      <stop offset="0.0" stop-color="#00ccff" stop-opacity="0.3372549"/>
+      <stop offset="1.0" stop-color="#0099cc" stop-opacity="0.11764706"/>
+    </linearGradient>
+    <linearGradient gradientTransform="matrix(-0.0281, -0.0517, 0.0517, -0.0281, 47.5, 47.5)" gradientUnits="userSpaceOnUse" id="gradient8" spreadMethod="pad" x1="-819.2" x2="819.2">
+      <stop offset="0.0" stop-color="#00ccff" stop-opacity="0.3372549"/>
+      <stop offset="1.0" stop-color="#0099cc" stop-opacity="0.32941177"/>
+    </linearGradient>
+    <g id="sprite10" transform="matrix(1.0, 0.0, 0.0, 1.0, 5.25, 6.25)">
+      <use ffdec:characterId="10" height="12.5" transform="matrix(1.0, 0.0, 0.0, 1.0, -5.25, -6.25)" width="10.5" xlink:href="#shape5"/>
+    </g>
+    <g id="shape5" transform="matrix(1.0, 0.0, 0.0, 1.0, 5.25, 6.25)">
+      <path d="M5.25 -2.75 Q5.25 0.1 2.0 3.25 -1.1 6.25 -3.4 6.25 -5.25 6.25 -5.25 2.1 -5.25 -0.45 -4.05 -2.5 L-3.25 -3.65 Q-0.4 -6.25 2.5 -6.25 4.1 -6.25 4.75 -5.25 5.25 -4.45 5.25 -2.75" fill="#fcffff" fill-rule="evenodd" stroke="none"/>
+    </g>
+    <g id="sprite11" transform="matrix(1.0, 0.0, 0.0, 1.0, -5.05, -9.4)">
+      <use ffdec:characterId="33" height="505.6" transform="matrix(0.1264, 0.0, 0.0, 0.1264, 9.4249, 9.4073)" width="665.05" xlink:href="#sprite12"/>
+      <use ffdec:characterId="36" height="106.65" transform="matrix(1.0, 0.0, 0.0, 1.0, 5.05, 10.0)" width="114.5" xlink:href="#sprite13"/>
+    </g>
+    <g id="sprite13" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+      <filter id="filter6">
+        <feColorMatrix in="SourceGraphic" result="filterResult13" type="matrix" values="0 0 0 0 0.4,0 0 0 0 0.4,0 0 0 0 1.0,0 0 0 1 0"/>
+        <feConvolveMatrix divisor="16.0" in="filterResult13" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="4 4" result="filterResult14"/>
+        <feComposite in="SourceGraphic" in2="filterResult14" operator="over" result="filterResult15"/>
+        <feConvolveMatrix divisor="4.0" in="filterResult15" kernelMatrix="1 1 1 1" order="2 2" result="filterResult16"/>
+      </filter>
+      <use ffdec:characterId="35" filter="url(#filter6)" height="87.85" transform="matrix(0.6204, 0.0, 0.0, 0.6204, 20.8, 40.5)" width="115.25" xlink:href="#sprite14"/>
+      <filter id="filter7">
+        <feColorMatrix in="SourceGraphic" result="filterResult17" type="matrix" values="0 0 0 0 0.4,0 0 0 0 0.4,0 0 0 0 1.0,0 0 0 1 0"/>
+        <feConvolveMatrix divisor="16.0" in="filterResult17" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="4 4" result="filterResult18"/>
+        <feComposite in="SourceGraphic" in2="filterResult18" operator="over" result="filterResult19"/>
+        <feConvolveMatrix divisor="4.0" in="filterResult19" kernelMatrix="1 1 1 1" order="2 2" result="filterResult20"/>
+      </filter>
+      <use ffdec:characterId="35" filter="url(#filter7)" height="87.85" transform="matrix(0.7546, -0.251, 0.1747, 0.6002, 12.2, 47.65)" width="115.25" xlink:href="#sprite14"/>
+      <filter id="filter8">
+        <feColorMatrix in="SourceGraphic" result="filterResult21" type="matrix" values="0 0 0 0 0.4,0 0 0 0 0.4,0 0 0 0 1.0,0 0 0 1 0"/>
+        <feConvolveMatrix divisor="16.0" in="filterResult21" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="4 4" result="filterResult22"/>
+        <feComposite in="SourceGraphic" in2="filterResult22" operator="over" result="filterResult23"/>
+        <feConvolveMatrix divisor="4.0" in="filterResult23" kernelMatrix="1 1 1 1" order="2 2" result="filterResult24"/>
+      </filter>
+      <use ffdec:characterId="35" filter="url(#filter8)" height="87.85" transform="matrix(0.5021, -0.629, 0.4161, 0.3588, 14.9, 72.5)" width="115.25" xlink:href="#sprite14"/>
+      <filter id="filter9">
+        <feColorMatrix in="SourceGraphic" result="filterResult25" type="matrix" values="0 0 0 0 0.4,0 0 0 0 0.4,0 0 0 0 1.0,0 0 0 1 0"/>
+        <feConvolveMatrix divisor="16.0" in="filterResult25" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="4 4" result="filterResult26"/>
+        <feComposite in="SourceGraphic" in2="filterResult26" operator="over" result="filterResult27"/>
+        <feConvolveMatrix divisor="4.0" in="filterResult27" kernelMatrix="1 1 1 1" order="2 2" result="filterResult28"/>
+      </filter>
+      <use ffdec:characterId="35" filter="url(#filter9)" height="87.85" transform="matrix(0.3612, 0.7134, -0.4992, 0.2294, 43.85, 4.3)" width="115.25" xlink:href="#sprite14"/>
+      <filter id="filter10">
+        <feColorMatrix in="SourceGraphic" result="filterResult29" type="matrix" values="0 0 0 0 0.4,0 0 0 0 0.4,0 0 0 0 1.0,0 0 0 1 0"/>
+        <feConvolveMatrix divisor="16.0" in="filterResult29" kernelMatrix="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1" order="4 4" result="filterResult30"/>
+        <feComposite in="SourceGraphic" in2="filterResult30" operator="over" result="filterResult31"/>
+        <feConvolveMatrix divisor="4.0" in="filterResult31" kernelMatrix="1 1 1 1" order="2 2" result="filterResult32"/>
+      </filter>
+      <use ffdec:characterId="35" filter="url(#filter10)" height="87.85" transform="matrix(0.3226, 0.1572, -0.2464, 0.4603, 65.45, 40.0)" width="115.25" xlink:href="#sprite14"/>
+    </g>
+    <g id="sprite14" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+      <use ffdec:characterId="34" height="87.85" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)" width="115.25" xlink:href="#shape6"/>
+    </g>
+    <g id="shape6" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+      <path d="M115.25 6.65 L113.15 7.85 Q112.15 8.5 111.5 9.05 L111.3 9.25 110.65 9.9 108.45 13.15 107.6 14.4 106.2 15.9 Q104.3 14.35 104.3 13.75 L104.05 13.75 103.05 13.65 102.9 13.5 103.55 13.2 103.75 12.9 104.1 12.1 104.15 12.1 104.15 12.0 104.15 11.9 104.05 12.1 103.9 12.0 103.8 11.95 101.05 10.45 98.95 9.45 98.5 9.65 96.8 9.65 95.85 9.85 Q95.35 9.95 94.75 10.6 94.8 11.1 95.05 11.25 L94.15 11.65 Q92.65 12.4 90.4 14.05 L90.0 14.35 86.7 16.65 Q81.55 14.5 81.3 13.9 L80.9 12.35 80.85 11.85 80.7 10.9 80.4 7.9 80.4 7.65 80.3 7.65 79.75 8.1 78.0 9.6 76.15 11.15 75.7 11.55 75.6 11.65 72.55 14.2 71.4 15.15 68.75 12.0 68.05 11.1 67.6 10.4 66.3 11.7 68.85 15.3 68.45 13.3 70.05 16.95 62.8 26.1 63.1 27.2 66.65 28.7 68.05 32.85 66.35 29.65 62.8 28.1 62.15 26.1 69.2 17.2 65.3 10.7 67.2 9.8 66.85 9.25 65.9 7.65 65.65 7.75 64.55 8.75 61.85 11.1 61.1 11.8 62.35 10.25 64.4 7.65 64.65 7.5 65.6 6.55 66.85 7.95 67.05 8.35 67.35 8.7 67.7 9.15 67.8 9.25 67.85 9.3 67.95 9.45 69.6 8.5 72.85 13.05 74.15 11.9 75.1 11.05 75.25 10.9 75.65 10.55 75.7 10.5 78.0 8.55 79.7 7.2 81.3 6.05 81.35 6.45 81.3 9.4 81.4 11.05 81.5 11.55 Q81.6 12.35 81.9 12.5 L87.05 14.4 Q87.25 14.2 89.45 12.9 L90.3 12.35 93.9 10.4 93.8 10.4 93.9 9.8 94.05 8.8 94.05 8.9 98.15 8.25 98.55 8.25 98.9 8.4 102.75 10.3 105.3 11.9 105.7 11.3 106.5 10.35 107.8 8.85 106.5 11.05 106.0 11.9 105.4 13.0 105.65 13.75 105.9 14.4 106.05 14.5 106.95 13.35 108.5 11.4 110.85 8.65 110.95 8.5 111.05 8.4 114.05 7.1 115.25 6.65 M72.8 0.0 L70.75 3.6 69.95 3.8 69.8 3.8 68.5 4.15 68.5 4.2 68.95 6.2 67.95 7.05 68.45 6.15 68.15 3.7 70.9 2.75 72.8 0.0 M61.7 1.9 L64.05 1.8 66.0 0.3 64.1 2.35 63.0 2.45 62.7 3.45 63.45 4.15 62.15 4.5 62.55 5.25 61.85 9.75 62.0 5.0 61.2 4.15 62.35 3.85 62.0 2.2 61.7 1.9 M68.6 10.25 L69.3 11.15 71.9 14.4 71.95 13.95 72.15 13.75 72.45 13.45 69.45 9.2 68.4 10.0 68.6 10.25 M54.65 1.05 L55.7 3.45 54.95 4.95 55.1 5.6 55.95 6.35 56.75 5.5 57.55 7.3 55.7 10.65 56.5 7.7 56.45 6.95 55.75 6.75 54.4 5.35 54.85 3.6 54.7 2.45 54.1 3.35 54.25 2.0 53.0 1.0 50.95 1.1 53.0 0.6 54.4 1.55 54.65 1.05 M24.65 18.95 L24.55 18.85 21.9 17.3 20.9 16.95 17.3 14.45 17.1 12.75 11.6 7.6 10.35 6.1 10.3 6.65 11.35 7.7 9.9 6.8 9.7 5.7 6.6 5.6 5.3 7.5 0.15 7.4 5.05 4.75 2.05 5.4 0.0 6.4 2.5 4.8 7.1 3.55 10.6 3.85 13.0 5.25 12.35 5.45 14.1 8.15 16.85 8.2 17.4 6.85 19.4 6.35 17.6 7.15 17.4 8.45 14.55 8.6 18.45 12.55 19.85 12.5 23.6 14.75 19.75 13.1 24.25 16.75 25.0 15.45 24.75 16.9 27.65 17.15 30.95 12.75 34.95 12.0 36.9 10.35 39.05 10.65 40.55 9.8 43.05 10.15 43.3 10.75 43.8 10.65 44.3 9.3 47.2 5.9 44.75 9.4 44.8 10.35 47.0 10.4 47.9 8.6 51.05 6.5 48.4 8.85 51.15 7.55 53.35 13.65 50.75 8.2 49.3 9.0 47.6 11.0 45.55 11.05 41.45 14.45 36.55 13.85 36.25 14.7 36.6 16.55 33.6 18.2 32.3 17.75 33.55 17.8 35.85 16.5 35.5 14.65 30.95 18.15 32.0 17.2 Q32.0 16.65 31.0 17.4 L30.1 18.15 29.9 18.3 25.45 18.8 25.15 18.7 Q24.65 18.4 24.65 18.95 M25.95 20.25 L25.9 20.25 25.8 20.15 25.9 20.25 25.95 20.25 M25.4 19.75 L25.1 19.4 25.2 19.5 25.4 19.75 M46.45 29.55 L45.6 30.75 44.55 36.35 46.9 40.1 46.45 29.55 M46.6 24.25 L46.5 22.95 50.65 16.15 47.35 22.65 47.65 24.15 46.7 25.45 47.9 26.7 48.65 39.7 51.75 42.75 51.8 48.8 51.3 42.75 49.1 40.65 49.75 43.2 Q48.6 42.55 48.2 42.45 L50.35 45.7 47.1 42.1 Q47.3 42.45 46.95 42.35 L48.7 47.5 47.35 44.4 46.6 43.8 46.35 43.95 46.35 44.3 46.45 45.05 46.1 45.15 45.95 44.55 45.5 42.4 45.3 42.8 45.75 45.25 45.0 45.4 44.95 49.95 48.3 53.2 46.65 48.2 48.25 50.9 49.05 53.6 49.45 54.0 47.0 57.85 46.3 60.3 45.45 59.7 44.0 61.5 43.75 68.2 44.5 69.35 45.75 65.2 44.5 75.3 Q43.15 75.2 42.45 77.65 L41.1 87.85 41.35 80.15 40.0 79.3 38.95 73.3 40.15 69.1 40.2 66.85 42.1 64.6 40.7 67.05 40.6 69.0 39.5 72.75 40.25 78.85 41.75 79.2 41.85 72.7 42.3 75.4 42.85 74.95 43.25 70.5 42.3 68.65 42.65 60.95 43.5 59.95 44.8 55.4 44.8 54.25 45.95 54.65 46.15 53.05 42.85 49.25 43.3 48.85 43.5 44.95 43.2 42.55 46.3 41.1 46.3 39.8 44.05 36.4 44.55 34.15 43.1 28.25 44.8 33.6 44.95 30.5 46.2 27.65 45.45 26.75 45.35 25.9 46.6 24.25 M31.2 13.2 L28.45 16.7 34.4 12.95 34.3 12.95 31.2 13.2 M5.0 7.1 L5.95 5.7 4.45 5.8 2.6 7.2 5.0 7.1 M47.6 54.9 L47.05 54.25 46.15 55.05 45.2 54.75 45.25 55.25 43.9 59.4 46.15 56.5 46.45 57.55 47.15 56.9 47.6 54.9" fill="#ffffff" fill-opacity="0.50980395" fill-rule="evenodd" stroke="none"/>
+      <path d="M30.95 18.15 L27.65 20.8 27.4 20.95 26.95 20.8 26.45 20.6 25.95 20.25 25.9 20.25 25.8 20.15 25.4 19.75 25.2 19.5 25.1 19.4 24.8 19.2 24.65 18.95 Q24.65 18.4 25.15 18.7 L25.45 18.8 25.75 19.05 26.5 19.8 26.75 19.9 27.3 20.2 29.45 18.65 29.9 18.3 30.1 18.15 31.0 17.4 Q32.0 16.65 32.0 17.2 L30.95 18.15" fill="#6666ff" fill-opacity="0.50980395" fill-rule="evenodd" stroke="none"/>
+    </g>
+    <g id="sprite15" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+      <use ffdec:characterId="6" height="36.45" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)" width="36.45" xlink:href="#shape7"/>
+    </g>
+    <g id="shape7" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+      <path d="M36.45 18.25 Q36.45 25.8 31.1 31.1 25.8 36.45 18.25 36.45 10.7 36.45 5.35 31.1 0.0 25.8 0.0 18.25 0.0 10.7 5.35 5.35 10.7 0.0 18.25 0.0 25.8 0.0 31.1 5.35 36.45 10.7 36.45 18.25" fill="#ffffff" fill-rule="evenodd" stroke="none"/>
+    </g>
+    <g id="sprite16" transform="matrix(1.0, 0.0, 0.0, 1.0, 1.6, 2.55)">
+      <use ffdec:characterId="41" height="42.85" transform="matrix(1.0, 0.0, 0.0, 1.0, -1.6, -2.55)" width="32.85" xlink:href="#shape8"/>
+    </g>
+    <g id="shape8" transform="matrix(1.0, 0.0, 0.0, 1.0, 1.6, 2.55)">
+      <path d="M25.45 3.0 L26.5 2.85 Q27.75 2.85 27.55 4.5 27.35 6.1 26.65 6.3 L26.6 6.05 27.0 5.2 27.35 4.0 Q27.35 3.25 26.1 3.25 L25.2 3.45 Q24.0 3.45 20.5 6.25 L16.95 9.3 16.9 9.05 18.05 7.85 18.95 7.05 22.5 4.25 23.75 3.65 Q25.1 3.0 25.45 3.0 M26.3 -2.45 L27.15 -2.55 28.25 -2.35 28.95 -2.2 Q31.7 -2.2 31.15 2.45 L31.1 3.1 31.2 1.8 Q31.2 -2.3 27.05 -2.3 L25.8 -2.0 Q25.45 -2.0 24.4 -1.35 L23.45 -0.7 Q21.3 -0.7 10.35 13.9 L3.8 22.25 Q3.15 23.0 1.05 27.45 -1.3 32.35 -1.3 33.65 L-1.15 37.6 Q-0.7 39.75 0.95 39.75 L1.7 39.95 2.65 39.75 3.65 39.5 Q4.7 39.5 5.8 37.95 L7.55 35.15 Q5.55 40.3 1.7 40.3 L0.3 39.8 -0.4 39.65 Q-1.45 39.65 -1.6 35.25 -1.6 29.65 4.2 21.3 7.15 17.0 10.7 13.05 13.35 9.25 17.3 4.7 23.4 -2.35 25.75 -2.35 L26.3 -2.45 M28.35 7.65 Q28.15 8.45 27.1 8.45 L26.75 8.25 Q26.45 8.0 26.45 7.65 26.45 7.0 27.05 6.85 L27.45 6.8 Q28.6 6.8 28.35 7.65 M5.25 34.6 L5.15 34.3 5.25 34.1 5.4 34.0 6.1 34.3 6.65 34.35 Q7.0 34.5 7.0 34.9 L7.0 34.95 7.0 35.05 6.85 35.05 5.8 34.9 5.25 34.6 M28.15 9.2 L28.1 9.1 Q30.45 5.45 30.95 3.9 30.25 7.35 28.15 9.2 M3.1 32.0 L3.2 32.2 3.3 32.4 3.05 33.2 3.15 33.75 4.9 33.45 5.05 33.75 5.2 33.6 5.25 33.75 Q3.7 34.9 3.3 34.9 L2.6 34.3 2.4 34.1 Q2.15 34.05 2.15 33.5 2.15 30.05 8.15 23.8 L5.6 27.0 Q3.1 29.9 3.1 32.0" fill="url(#gradient9)" fill-rule="evenodd" stroke="none"/>
+      <path d="M6.85 35.05 L5.95 35.75 5.1 36.85 Q3.95 38.0 3.05 38.0 1.2 38.0 0.45 36.15 0.0 35.1 0.0 34.0 L0.05 32.1 0.95 30.4 Q1.95 26.9 5.05 22.0 9.2 15.45 15.1 9.35 L17.9 6.65 Q15.85 8.65 13.65 11.55 L16.9 8.45 16.95 8.4 17.05 8.3 17.25 8.1 17.3 8.0 22.1 3.3 21.0 4.1 Q22.0 3.3 22.95 2.65 29.0 -2.3 29.8 1.95 L29.95 3.15 29.95 3.45 29.9 4.15 29.55 5.45 29.55 5.5 28.4 7.65 28.35 7.65 Q28.6 6.8 27.45 6.8 L27.05 6.85 27.8 5.4 28.15 4.8 28.4 4.3 Q28.25 2.3 26.35 2.3 24.55 2.3 22.45 3.5 18.65 6.15 13.65 12.4 L13.05 13.25 12.1 14.55 Q8.2 20.05 3.6 28.15 L1.9 31.95 1.7 35.1 1.85 35.35 Q2.15 35.75 3.05 35.75 L3.2 35.75 4.4 35.3 4.55 35.15 5.25 34.6 5.8 34.9 6.85 35.05 M7.0 34.9 L7.05 34.9 7.0 34.95 7.0 34.9 M16.25 9.15 L16.6 8.75 16.9 8.45 16.25 9.15" fill="url(#gradient10)" fill-rule="evenodd" stroke="none"/>
+    </g>
+    <radialGradient cx="0" cy="0" gradientTransform="matrix(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)" gradientUnits="userSpaceOnUse" id="gradient9" r="819.2" spreadMethod="pad">
+      <stop offset="0.0" stop-color="#ffffff"/>
+      <stop offset="0.39215686274509803" stop-color="#ffffff"/>
+      <stop offset="0.7019607843137254" stop-color="#ffcc00"/>
+      <stop offset="1.0" stop-color="#ffff00"/>
+    </radialGradient>
+    <radialGradient cx="0" cy="0" gradientTransform="matrix(0.0, 0.0, 0.0, 0.0, -52.5, -39.45)" gradientUnits="userSpaceOnUse" id="gradient10" r="819.2" spreadMethod="pad">
+      <stop offset="0.0" stop-color="#ffffff"/>
+      <stop offset="0.39215686274509803" stop-color="#ffffff"/>
+      <stop offset="0.7019607843137254" stop-color="#ffcc00"/>
+      <stop offset="1.0" stop-color="#ffff00"/>
+    </radialGradient>
+    <g id="shape9" transform="matrix(1.0, 0.0, 0.0, 1.0, -6.95, -8.6)">
+      <path d="M76.8 19.25 L50.65 19.25 50.65 23.6 79.25 23.6 79.25 45.85 66.55 50.3 66.55 31.55 50.75 31.55 50.75 46.3 38.0 50.6 38.0 31.55 22.15 31.55 22.15 46.65 9.45 51.05 9.45 23.6 37.95 23.6 37.95 19.25 9.45 19.25 9.45 11.1 80.35 11.1 76.8 19.25 M64.7 46.3 L55.65 46.3 52.15 41.45 61.2 41.45 64.7 46.3 M64.4 38.7 L55.45 38.7 51.75 33.85 60.9 33.85 64.4 38.7 M50.45 64.45 Q48.8 65.1 47.1 65.85 40.35 68.9 33.45 71.4 L22.75 71.4 22.75 75.1 9.45 79.0 9.45 51.6 75.6 51.6 Q68.25 55.8 60.6 59.65 L50.45 59.65 50.45 64.45 M27.5 38.95 L24.05 34.05 32.95 34.05 36.3 38.95 27.5 38.95 M27.7 46.5 L24.25 41.65 33.1 41.65 36.6 46.5 27.7 46.5 M22.75 64.5 L37.2 64.5 37.2 59.65 22.75 59.65 22.75 64.5" fill="url(#gradient11)" fill-rule="evenodd" stroke="none"/>
+      <path d="M33.45 71.4 Q40.35 68.9 47.1 65.85 48.8 65.1 50.45 64.45 L50.45 64.5 63.5 64.5 59.2 71.4 50.45 71.4 50.45 76.2 65.65 76.2 65.65 59.65 60.6 59.65 Q68.25 55.8 75.6 51.6 L78.95 51.6 78.95 74.9 63.1 84.45 9.45 84.45 9.45 79.0 22.75 75.1 22.75 76.2 37.2 76.2 37.2 71.4 33.45 71.4" fill="url(#gradient12)" fill-rule="evenodd" stroke="none"/>
+      <path d="M76.8 19.25 L50.65 19.25 50.65 23.6 79.25 23.6 79.25 45.85 66.55 50.3 66.55 31.55 50.75 31.55 50.75 46.3 38.0 50.6 38.0 31.55 22.15 31.55 22.15 46.65 9.45 51.05 9.45 23.6 37.95 23.6 37.95 19.25 9.45 19.25 9.45 11.1 80.35 11.1 76.8 19.25 M64.7 46.3 L55.65 46.3 52.15 41.45 61.2 41.45 64.7 46.3 M64.4 38.7 L55.45 38.7 51.75 33.85 60.9 33.85 64.4 38.7 M50.45 64.45 Q48.8 65.1 47.1 65.85 40.35 68.9 33.45 71.4 L37.2 71.4 37.2 76.2 22.75 76.2 22.75 75.1 9.45 79.0 9.45 84.45 63.1 84.45 78.95 74.9 78.95 51.6 75.6 51.6 Q68.25 55.8 60.6 59.65 L65.65 59.65 65.65 76.2 50.45 76.2 50.45 71.4 59.2 71.4 63.5 64.5 50.45 64.5 50.45 64.45 50.45 59.65 60.6 59.65 M27.5 38.95 L24.05 34.05 32.95 34.05 36.3 38.95 27.5 38.95 M27.7 46.5 L24.25 41.65 33.1 41.65 36.6 46.5 27.7 46.5 M22.75 64.5 L37.2 64.5 37.2 59.65 22.75 59.65 22.75 64.5 M33.45 71.4 L22.75 71.4 22.75 75.1 M9.45 79.0 L9.45 51.6 75.6 51.6" fill="none" stroke="#993300" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.0"/>
+      <path d="M80.45 11.15 L76.9 19.3 50.8 19.3 50.8 23.65 79.35 23.65 79.35 45.9 66.65 50.35 66.65 31.6 50.85 31.6 50.85 46.4 38.15 50.7 38.15 31.6 22.3 31.6 22.3 46.7 9.55 51.1 9.55 23.65 38.05 23.65 38.05 19.3 9.55 19.3 9.55 11.15 80.45 11.15 M64.55 38.8 L55.6 38.8 51.9 33.95 61.05 33.95 64.55 38.8 M36.45 39.0 L27.6 39.0 24.2 34.15 33.1 34.15 36.45 39.0 M33.55 71.45 L22.9 71.45 22.9 75.15 9.55 79.05 9.55 51.65 75.75 51.65 Q68.35 55.9 60.7 59.7 L50.6 59.7 50.6 64.5 47.25 65.95 Q40.45 68.95 33.55 71.45 M37.3 59.7 L22.9 59.7 22.9 64.55 37.3 64.55 37.3 59.7 M61.3 41.5 L64.8 46.4 55.8 46.4 52.3 41.5 61.3 41.5 M36.7 46.6 L27.8 46.6 24.4 41.75 33.2 41.75 36.7 46.6" fill="url(#gradient13)" fill-rule="evenodd" stroke="none"/>
+      <path d="M22.9 75.15 L22.9 76.25 37.3 76.25 37.3 71.45 33.55 71.45 Q40.45 68.95 47.25 65.95 L50.6 64.5 50.6 64.55 63.65 64.55 59.35 71.45 50.6 71.45 50.6 76.25 65.75 76.25 65.75 59.7 60.7 59.7 Q68.35 55.9 75.75 51.65 L79.1 51.65 79.1 74.95 63.25 84.55 9.55 84.55 9.55 79.05 22.9 75.15" fill="url(#gradient14)" fill-rule="evenodd" stroke="none"/>
+    </g>
+    <linearGradient gradientTransform="matrix(-0.0012, -0.0538, 0.0428, -0.001, -48.75, 56.75)" gradientUnits="userSpaceOnUse" id="gradient11" spreadMethod="pad" x1="-819.2" x2="819.2">
+      <stop offset="0.00392156862745098" stop-color="#ff9900"/>
+      <stop offset="0.5333333333333333" stop-color="#ffff00"/>
+      <stop offset="1.0" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient gradientTransform="matrix(-0.0012, -0.0538, 0.0428, -0.001, -50.95, 65.55)" gradientUnits="userSpaceOnUse" id="gradient12" spreadMethod="pad" x1="-819.2" x2="819.2">
+      <stop offset="0.00392156862745098" stop-color="#ff9900"/>
+      <stop offset="0.5333333333333333" stop-color="#ffb600"/>
+      <stop offset="1.0" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient gradientTransform="matrix(-0.0012, -0.0538, 0.0428, -0.001, -48.65, 56.85)" gradientUnits="userSpaceOnUse" id="gradient13" spreadMethod="pad" x1="-819.2" x2="819.2">
+      <stop offset="0.00392156862745098" stop-color="#ff9900"/>
+      <stop offset="0.5333333333333333" stop-color="#ffff00"/>
+      <stop offset="1.0" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient gradientTransform="matrix(-0.0012, -0.0538, 0.0428, -0.001, -50.8, 65.6)" gradientUnits="userSpaceOnUse" id="gradient14" spreadMethod="pad" x1="-819.2" x2="819.2">
+      <stop offset="0.00392156862745098" stop-color="#ff9900"/>
+      <stop offset="0.5333333333333333" stop-color="#ffb600"/>
+      <stop offset="1.0" stop-color="#ffffff"/>
+    </linearGradient>
+    <g id="shape10" transform="matrix(1.0, 0.0, 0.0, 1.0, -14.85, -5.0)">
+      <path d="M56.0 13.9 Q56.3 15.05 55.85 15.95 55.4 16.75 54.35 17.1 L50.5 18.1 51.4 21.45 Q51.55 21.95 52.0 21.8 L58.65 20.0 59.3 22.5 50.95 24.8 Q49.35 25.25 48.95 23.7 L47.6 18.9 45.55 19.4 44.9 17.0 46.95 16.5 44.55 7.55 47.4 6.75 49.8 15.7 52.65 14.95 Q53.2 14.75 52.85 13.5 L51.2 7.2 54.0 6.5 56.0 13.9 M22.4 13.5 L23.85 19.0 Q24.25 20.45 22.85 20.85 L21.1 21.35 21.55 23.05 Q21.6 23.3 21.95 23.25 L24.85 22.45 26.8 29.6 Q27.1 31.0 25.85 31.35 L21.15 32.6 20.5 30.15 23.4 29.4 23.95 28.9 23.05 25.5 21.15 26.05 Q19.9 26.35 19.55 25.15 L18.05 19.55 20.75 18.8 21.0 18.4 20.5 16.6 16.95 17.55 16.35 15.15 22.4 13.5 M32.05 13.1 L26.9 14.45 27.3 16.05 31.95 14.85 Q32.45 14.7 32.25 13.95 L32.05 13.1 M35.1 14.25 Q35.6 16.1 33.75 16.6 L31.75 17.15 32.05 18.3 36.3 17.15 37.55 21.8 Q38.05 23.7 36.15 24.2 L33.8 24.85 34.3 26.75 35.1 26.55 Q35.7 26.35 35.7 25.1 L38.35 24.4 Q38.8 26.35 38.35 27.35 37.95 28.3 36.85 28.55 L27.65 31.0 27.0 28.7 31.55 27.5 31.1 25.55 27.0 26.65 25.2 20.05 29.3 19.0 29.05 17.9 25.25 18.9 23.65 13.1 34.0 10.35 35.1 14.25 M40.05 8.35 L43.05 7.5 42.45 13.0 45.95 26.1 43.3 26.85 40.4 16.05 38.4 16.55 37.75 13.95 39.35 13.6 Q39.75 13.45 39.8 12.65 L40.05 8.35 M32.65 20.55 L33.25 22.6 34.2 22.3 Q34.8 22.1 34.6 21.35 L34.2 20.05 32.65 20.55 M29.0 23.7 L30.5 23.3 29.9 21.25 28.4 21.65 29.0 23.7" fill="#990000" fill-rule="evenodd" stroke="none"/>
+      <path d="M56.0 13.9 Q56.3 15.05 55.85 15.95 55.4 16.75 54.35 17.1 L50.5 18.1 51.4 21.45 Q51.55 21.95 52.0 21.8 L58.65 20.0 59.3 22.5 50.95 24.8 Q49.35 25.25 48.95 23.7 L47.6 18.9 45.55 19.4 44.9 17.0 46.95 16.5 44.55 7.55 47.4 6.75 49.8 15.7 52.65 14.95 Q53.2 14.75 52.85 13.5 L51.2 7.2 54.0 6.5 56.0 13.9 M22.4 13.5 L23.85 19.0 Q24.25 20.45 22.85 20.85 L21.1 21.35 21.55 23.05 Q21.6 23.3 21.95 23.25 L24.85 22.45 26.8 29.6 Q27.1 31.0 25.85 31.35 L21.15 32.6 20.5 30.15 23.4 29.4 23.95 28.9 23.05 25.5 21.15 26.05 Q19.9 26.35 19.55 25.15 L18.05 19.55 20.75 18.8 21.0 18.4 20.5 16.6 16.95 17.55 16.35 15.15 22.4 13.5 M32.05 13.1 L26.9 14.45 27.3 16.05 31.95 14.85 Q32.45 14.7 32.25 13.95 L32.05 13.1 M35.1 14.25 Q35.6 16.1 33.75 16.6 L31.75 17.15 32.05 18.3 36.3 17.15 37.55 21.8 Q38.05 23.7 36.15 24.2 L33.8 24.85 34.3 26.75 35.1 26.55 Q35.7 26.35 35.7 25.1 L38.35 24.4 Q38.8 26.35 38.35 27.35 37.95 28.3 36.85 28.55 L27.65 31.0 27.0 28.7 31.55 27.5 31.1 25.55 27.0 26.65 25.2 20.05 29.3 19.0 29.05 17.9 25.25 18.9 23.65 13.1 34.0 10.35 35.1 14.25 M40.05 8.35 L43.05 7.5 42.45 13.0 45.95 26.1 43.3 26.85 40.4 16.05 38.4 16.55 37.75 13.95 39.35 13.6 Q39.75 13.45 39.8 12.65 L40.05 8.35 M32.65 20.55 L33.25 22.6 34.2 22.3 Q34.8 22.1 34.6 21.35 L34.2 20.05 32.65 20.55 M29.0 23.7 L30.5 23.3 29.9 21.25 28.4 21.65 29.0 23.7 Z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.0"/>
+      <path d="M59.2 22.65 L50.75 24.85 Q49.1 25.35 48.75 23.85 L47.4 19.0 45.25 19.55 44.7 17.3 46.7 16.55 44.4 7.7 47.2 7.0 49.6 15.85 52.5 15.2 Q53.0 14.85 52.7 13.6 L51.0 7.3 53.7 6.7 55.75 14.0 Q56.1 15.2 55.7 16.1 L54.2 17.3 50.25 18.15 51.2 21.55 Q51.25 22.05 51.75 22.0 L58.5 20.15 59.2 22.65 M42.9 7.6 L42.2 13.2 45.75 26.3 43.1 27.0 40.2 16.2 38.25 16.65 37.5 14.1 39.1 13.8 Q39.6 13.6 39.6 12.7 L39.9 8.35 42.9 7.6 M33.6 16.8 L31.6 17.35 31.75 18.5 36.1 17.35 37.4 22.0 Q37.9 23.85 36.0 24.35 L33.7 25.0 34.0 26.85 34.9 26.65 Q35.5 26.55 35.5 25.3 L38.1 24.5 Q38.6 26.55 38.1 27.5 37.75 28.5 36.6 28.65 L27.5 31.15 26.75 28.85 31.4 27.55 31.0 25.8 26.75 26.8 25.0 20.3 29.1 19.05 28.9 18.05 25.1 19.0 23.5 13.3 33.75 10.5 34.9 14.35 Q35.5 16.2 33.6 16.8 M31.75 13.3 L26.75 14.6 27.1 16.2 31.75 15.1 Q32.2 14.8 32.0 14.1 L31.75 13.3 M29.7 21.5 L28.2 21.85 28.75 23.85 30.25 23.35 29.7 21.5 M32.4 20.65 L33.0 22.8 34.0 22.5 Q34.6 22.3 34.4 21.55 L34.0 20.3 32.4 20.65 M22.25 13.6 L23.65 19.05 Q24.0 20.65 22.7 21.0 L20.9 21.55 21.25 23.15 Q21.4 23.35 21.7 23.35 L24.7 22.55 26.6 29.65 Q27.0 31.15 25.7 31.5 L21.0 32.8 20.25 30.35 23.2 29.5 Q23.75 29.35 23.7 29.05 L22.9 25.55 21.0 26.15 Q19.65 26.55 19.4 25.3 L17.75 19.65 20.65 19.0 Q20.9 18.85 20.75 18.55 L20.25 16.8 16.75 17.65 16.2 15.3 22.25 13.6" fill="#990000" fill-rule="evenodd" stroke="none"/>
+    </g>
+  </defs>
+</svg>
