@@ -1,4 +1,4 @@
-### seer-soul-mrak-img-dumper
+### seer-soul-mark-img-dumper
 
 一个用于从赛尔号精灵魂印 SWF 文件中提取并压缩魂印图片的小工具。
 
@@ -8,7 +8,7 @@
 2. 克隆本仓库并安装依赖：
    ```bash
    git clone <repo-url>
-   cd seer-soul-mrak-img-dumper
+   cd seer-soul-mark-img-dumper
    pnpm install
    ```
 3. 将 SWF 文件放入 `./swf` 目录。
@@ -27,7 +27,7 @@
 ### 目录结构
 
 ```
-seer-soul-mrak-img-dumper/
+seer-soul-mark-img-dumper/
 ├── swf/                # 存放 SWF 文件的目录
 ├── img/                # 提取的图片将保存在此目录
 ├── utils/              # 工具函数目录
