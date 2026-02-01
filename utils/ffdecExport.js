@@ -3,22 +3,20 @@ const path = require("path");
 const fs = require("fs").promises;
 const logger = require("./logger");
 
-// FFDec 路径配置
+// FFDec 路径
 const FFDEC_PATH = "D:/ffdec/ffdec.bat";
 
-// Java 选项：抑制警告并优化性能
+// Java 运行参数
 const JAVA_OPTS = "--enable-native-access=ALL-UNNAMED -Xms64m -Xmx512m";
 
-// 缓存 FFDec 可用性检查结果
+// FFDec 可用性缓存
 let ffdecAvailableCache = null;
 
 /**
- * 检查 FFDec 是否可用（带缓存）
+ * 检查 FFDec 是否可用
  */
 async function checkFfdecAvailable() {
-  if (ffdecAvailableCache !== null) {
-    return ffdecAvailableCache;
-  }
+  if (ffdecAvailableCache !== null) return ffdecAvailableCache;
 
   try {
     execSync(`"${FFDEC_PATH}" -help`, {
@@ -28,163 +26,144 @@ async function checkFfdecAvailable() {
     });
     ffdecAvailableCache = true;
     return true;
-  } catch (error) {
+  } catch {
     ffdecAvailableCache = false;
     return false;
   }
 }
 
 /**
- * 获取目录下所有导出的图片文件
+ * 递归获取导出的图片文件
  */
 async function getExportedFiles(dir) {
   const files = [];
 
-  async function walk(currentDir) {
-    try {
-      const entries = await fs.readdir(currentDir, { withFileTypes: true });
-      for (const entry of entries) {
-        const fullPath = path.join(currentDir, entry.name);
-        if (entry.isDirectory()) {
-          await walk(fullPath);
-        } else if (entry.isFile()) {
-          const ext = path.extname(entry.name).toLowerCase();
-          if ([".png", ".jpg", ".jpeg", ".svg", ".gif"].includes(ext)) {
-            files.push(fullPath);
+  async function walk(current) {
+    const entries = await fs.readdir(current, { withFileTypes: true });
+    for (const e of entries) {
+      const p = path.join(current, e.name);
+      if (e.isDirectory()) await walk(p);
+      else if (e.isFile()) {
+        const ext = path.extname(e.name).toLowerCase();
+        if ([".png", ".jpg", ".jpeg", ".svg"].includes(ext)) {
+          // 只收集包含_item的文件，没招了 className 导出时不生效
+          if (p.includes("_item")) {
+            files.push(p);
           }
         }
       }
-    } catch (error) {
-      // 忽略无法访问的目录
     }
   }
 
-  await walk(dir);
+  try {
+    await walk(dir);
+  } catch {}
   return files;
 }
 
 /**
- * 使用 FFDec 导出 SWF 中的所有图片（包括矢量形状）
+ * 按 class 或 chid 精确导出 Sprite
+ * @param {string} swfPath
+ * @param {string} outputDir
+ * @param {Object} options
+ * @param {string} [options.className] 例如 "item"
+ * @param {number} [options.chid] 例如 7
+ * @param {string} [options.format] 导出格式: "png" 或 "svg"，默认 "svg"
  */
-async function exportWithFfdec(swfPath, outputDir, format = "svg") {
-  const absoluteSwfPath = path.resolve(swfPath);
-  const absoluteOutputDir = path.resolve(outputDir);
+async function exportSprite(
+  swfPath,
+  outputDir,
+  { className = "item", chid = 7, format = "svg" }
+) {
+  const absSwf = path.resolve(swfPath);
+  const absOut = path.resolve(outputDir);
 
-  await fs.mkdir(absoluteOutputDir, { recursive: true });
+  await fs.mkdir(absOut, { recursive: true });
 
-  try {
-    const args = [
-      "-export",
-      "shape,image",
-      absoluteOutputDir,
-      absoluteSwfPath,
-      "-format",
-      `shape:${format},image:png`,
-    ];
-
-    execSync(`"${FFDEC_PATH}" ${args.join(" ")}`, {
-      encoding: "utf-8",
-      maxBuffer: 50 * 1024 * 1024,
-      stdio: ["pipe", "pipe", "pipe"],
-      env: { ...process.env, JAVA_TOOL_OPTIONS: JAVA_OPTS },
-      windowsHide: true,
-    });
-
-    return await getExportedFiles(absoluteOutputDir);
-  } catch (error) {
-    const exportedFiles = await getExportedFiles(absoluteOutputDir);
-    if (exportedFiles.length > 0) {
-      return exportedFiles;
-    }
-    throw error;
+  if (!className && typeof chid !== "number") {
+    throw new Error("exportSprite 需要 className 或 chid 其中之一");
   }
+
+  const args = [
+    "-format",
+    `sprite:${format}`,
+    "-export",
+    "sprite",
+    absOut,
+    absSwf,
+  ];
+
+  execSync(`"${FFDEC_PATH}" ${args.join(" ")}`, {
+    encoding: "utf-8",
+    maxBuffer: 50 * 1024 * 1024,
+    env: { ...process.env, JAVA_TOOL_OPTIONS: JAVA_OPTS },
+    windowsHide: true,
+  });
+
+  return await getExportedFiles(absOut);
 }
 
 /**
- * 使用 FFDec 导出 SWF 为单张图片（渲染整个 SWF）
+ * fallback：整 SWF 渲染为一张图
  */
-async function exportSwfAsImage(swfPath, outputPath, frame = 1) {
-  const absoluteSwfPath = path.resolve(swfPath);
-  const absoluteOutputPath = path.resolve(outputPath);
+async function renderSwf(swfPath, outputPath, frame = 1) {
+  const absSwf = path.resolve(swfPath);
+  const absOut = path.resolve(outputPath);
 
-  await fs.mkdir(path.dirname(absoluteOutputPath), { recursive: true });
+  await fs.mkdir(path.dirname(absOut), { recursive: true });
 
-  try {
-    const args = [
-      "-render",
-      absoluteOutputPath,
-      absoluteSwfPath,
-      "-frame",
-      frame.toString(),
-    ];
+  execSync(`"${FFDEC_PATH}" -render "${absOut}" "${absSwf}" -frame ${frame}`, {
+    encoding: "utf-8",
+    env: { ...process.env, JAVA_TOOL_OPTIONS: JAVA_OPTS },
+    windowsHide: true,
+  });
 
-    execSync(`"${FFDEC_PATH}" ${args.join(" ")}`, {
-      encoding: "utf-8",
-      maxBuffer: 50 * 1024 * 1024,
-      stdio: ["pipe", "pipe", "pipe"],
-      env: { ...process.env, JAVA_TOOL_OPTIONS: JAVA_OPTS },
-      windowsHide: true,
-    });
-
-    return absoluteOutputPath;
-  } catch (error) {
-    try {
-      await fs.access(absoluteOutputPath);
-      return absoluteOutputPath;
-    } catch {
-      throw error;
-    }
-  }
+  return absOut;
 }
 
 /**
- * 导出图片
+ * 对外主入口
+ *
+ * @param {string} swfPath
+ * @param {string} outputDir
+ * @param {string} id 文件命名用
+ * @param {Object} options
+ * @param {string} [options.className] 推荐
+ * @param {number} [options.chid] 兜底
  */
-async function exportImages(swfPath, outputDir, id) {
-  const ffdecAvailable = await checkFfdecAvailable();
-
-  if (!ffdecAvailable) {
-    logger.warn("FFDec 不可用，请安装 FFDec 并配置路径");
+async function exportImages(swfPath, outputDir, id, options = {}) {
+  if (!(await checkFfdecAvailable())) {
+    logger.warn("FFDec 不可用");
     return { files: [], method: "none" };
   }
 
   const tempDir = path.join(outputDir, `_temp_${id}`);
 
   try {
-    const exportedFiles = await exportWithFfdec(swfPath, tempDir, "svg");
+    const files = await exportSprite(swfPath, tempDir, options);
 
-    if (exportedFiles.length === 0) {
-      const outputPath = path.join(outputDir, `${id}.png`);
-      await exportSwfAsImage(swfPath, outputPath);
-      await fs.rm(tempDir, { recursive: true, force: true });
-      return { files: [outputPath], method: "render" };
+    if (!files.length) {
+      const out = path.join(outputDir, `${id}.png`);
+      await renderSwf(swfPath, out);
+      return { files: [out], method: "render" };
     }
 
     const finalFiles = [];
-    for (let i = 0; i < exportedFiles.length; i++) {
-      const srcPath = exportedFiles[i];
-      const ext = path.extname(srcPath);
-      const destFileName =
-        exportedFiles.length === 1 ? `${id}${ext}` : `${id}_${i + 1}${ext}`;
-      const destPath = path.join(outputDir, destFileName);
-
-      await fs.copyFile(srcPath, destPath);
-      finalFiles.push(destPath);
+    for (let i = 0; i < files.length; i++) {
+      const ext = path.extname(files[i]);
+      const name = files.length === 1 ? `${id}${ext}` : `${id}_${i + 1}${ext}`;
+      const dest = path.join(outputDir, name);
+      await fs.copyFile(files[i], dest);
+      finalFiles.push(dest);
     }
 
-    await fs.rm(tempDir, { recursive: true, force: true });
-    return { files: finalFiles, method: "export" };
-  } catch (error) {
-    try {
-      await fs.rm(tempDir, { recursive: true, force: true });
-    } catch (e) {}
-    throw error;
+    return { files: finalFiles, method: "sprite" };
+  } finally {
+    await fs.rm(tempDir, { recursive: true, force: true }).catch(() => {});
   }
 }
 
 module.exports = {
   checkFfdecAvailable,
-  exportWithFfdec,
-  exportSwfAsImage,
   exportImages,
 };

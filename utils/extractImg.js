@@ -48,7 +48,7 @@ async function compressJPEG(buffer, quality = 80) {
   try {
     const img = await Jimp.read(buffer);
 
-    const jpeg = await img.resize({ w: 1024 }).getBuffer("image/jpeg", {
+    const jpeg = await img.getBuffer("image/jpeg", {
       quality: quality,
     });
     return jpeg.toString("base64");
@@ -63,7 +63,7 @@ async function compressPNG(buffer, quality = 80) {
   try {
     const img = await Jimp.read(buffer);
 
-    const png = await img.resize({ w: 1024 }).getBuffer("image/png", {
+    const png = await img.getBuffer("image/png", {
       quality: quality,
     });
     return png.toString("base64");

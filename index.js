@@ -122,10 +122,8 @@ async function processId(id, quality = 100, useFfdec = false) {
   logger.info(`开始处理序号: ${id}`);
 
   try {
-    // 下载 SWF
     const swfPath = await downloadAndSaveSwf(id);
 
-    // 先尝试原生提取图片
     const images = await extractAndCompressImages(swfPath, quality);
 
     if (images.length > 0) {
@@ -135,10 +133,12 @@ async function processId(id, quality = 100, useFfdec = false) {
       return;
     }
 
-    // 如果原生提取失败且启用了 FFDec
     if (useFfdec) {
-      // logger.info(`原生提取无结果，尝试使用 FFDec 导出...`);
-      const result = await exportImages(swfPath, imgDir, id);
+      logger.info(`原生提取无结果，使用 FFDec 精确导出 Sprite`);
+
+      const result = await exportImages(swfPath, imgDir, id, {
+        className: "item",
+      });
 
       if (result.files.length > 0) {
         logger.success(
