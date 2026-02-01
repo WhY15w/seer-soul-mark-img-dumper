@@ -136,11 +136,11 @@ async function checkImageExists(id) {
  * @param {boolean} useFfdec 是否使用 FFDec 导出
  */
 async function processId(id, quality = 100, useFfdec = false) {
-  logger.info(`开始处理序号: ${id}`);
-
   if (await checkImageExists(id)) {
     return;
   }
+
+  logger.info(`开始处理序号: ${id}`);
 
   try {
     const swfPath = await downloadAndSaveSwf(id);
@@ -246,12 +246,10 @@ function showHelp() {
 
   logger.info(`准备处理 ${ids.length} 个序号: ${ids.join(", ")}`);
 
-  // 逐个处理
   for (const id of ids) {
     await processId(id, 100, useFfdec);
-    // 添加短暂延迟，避免请求过快
     if (ids.length > 1) {
-      await new Promise((resolve) => setTimeout(resolve, 50));
+      await new Promise((resolve) => setTimeout(resolve, 5));
     }
   }
 
