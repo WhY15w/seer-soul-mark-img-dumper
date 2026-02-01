@@ -1,0 +1,61 @@
+name: Dump SWF Images
+
+on:
+  schedule:
+    # 每周五 北京时间 12:00 和 15:00
+    - cron: '0 4 * * 5'
+    - cron: '0 7 * * 5'
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'SWF IDs to dump (e.g., 1-100 or 1,2,3)'
+        required: false
+        default: '1-2100'
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Make ffdec executable
+        run: chmod +x ./ffdec_24.1.2_nightly3395/ffdec.jar
+
+      - name: Run dump script
+        env:
+          FFDEC_JAR_PATH: ${{ github.workspace }}/ffdec_24.1.2_nightly3395/ffdec.jar
+        run: |
+          if [ -n "${{ github.event.inputs.ids }}" ]; then
+            node index.js --ffdec ${{ github.event.inputs.ids }}
+          else
+            node index.js --ffdec 1-2100
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add img/
+          git diff --staged --quiet || git commit -m "chore: update dumped images [skip ci]"
+          git push

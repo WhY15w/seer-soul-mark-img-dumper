@@ -113,6 +113,23 @@ async function saveImages(images, id, outputDir) {
 }
 
 /**
+ * 检查 img 目录中是否已存在该序号的图片
+ * @param {number} id 序号
+ * @returns {Promise<boolean>} 是否已存在
+ */
+async function checkImageExists(id) {
+  const extensions = [".png", ".jpg", ".jpeg", ".svg"];
+  for (const ext of extensions) {
+    const filePath = path.join(imgDir, `${id}${ext}`);
+    try {
+      await fs.access(filePath);
+      return true;
+    } catch {}
+  }
+  return false;
+}
+
+/**
  * 处理单个序号：下载 SWF、提取图片、保存图片
  * @param {number} id 序号
  * @param {number} quality 图片质量
@@ -120,6 +137,10 @@ async function saveImages(images, id, outputDir) {
  */
 async function processId(id, quality = 100, useFfdec = false) {
   logger.info(`开始处理序号: ${id}`);
+
+  if (await checkImageExists(id)) {
+    return;
+  }
 
   try {
     const swfPath = await downloadAndSaveSwf(id);

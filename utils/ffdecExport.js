@@ -3,10 +3,14 @@ const path = require("path");
 const fs = require("fs").promises;
 const logger = require("./logger");
 
-// FFDec 路径
-const FFDEC_PATH = "D:/ffdec/ffdec.bat";
+const FFDEC_JAVA = "java";
 
-// Java 运行参数
+const DEFAULT_FFDEC_JAR = path.resolve(
+  __dirname,
+  "../ffdec_24.1.2_nightly3395/ffdec.jar"
+);
+const FFDEC_JAR_PATH = process.env.FFDEC_JAR_PATH || DEFAULT_FFDEC_JAR;
+const FFDEC_CORE_ARGS = ["-jar", FFDEC_JAR_PATH];
 const JAVA_OPTS = "--enable-native-access=ALL-UNNAMED -Xms64m -Xmx512m";
 
 // FFDec 可用性缓存
@@ -19,7 +23,7 @@ async function checkFfdecAvailable() {
   if (ffdecAvailableCache !== null) return ffdecAvailableCache;
 
   try {
-    execSync(`"${FFDEC_PATH}" -help`, {
+    execSync(`${FFDEC_JAVA} ${FFDEC_CORE_ARGS.join(" ")} -help`, {
       stdio: "ignore",
       env: { ...process.env, JAVA_TOOL_OPTIONS: JAVA_OPTS },
       windowsHide: true,
@@ -37,6 +41,7 @@ async function checkFfdecAvailable() {
  */
 async function getExportedFiles(dir) {
   const files = [];
+  let lastFile = null;
 
   async function walk(current) {
     const entries = await fs.readdir(current, { withFileTypes: true });
@@ -46,6 +51,7 @@ async function getExportedFiles(dir) {
       else if (e.isFile()) {
         const ext = path.extname(e.name).toLowerCase();
         if ([".png", ".jpg", ".jpeg", ".svg"].includes(ext)) {
+          lastFile = p; // 记录最后一个图片文件
           // 只收集包含_item的文件，没招了 className 导出时不生效
           if (p.includes("_item")) {
             files.push(p);
@@ -58,7 +64,45 @@ async function getExportedFiles(dir) {
   try {
     await walk(dir);
   } catch {}
+
+  // 如果没有匹配到_item的文件，但有图片文件，则返回最后一个
+  if (files.length === 0 && lastFile) {
+    return [lastFile];
+  }
+
   return files;
+}
+
+/**
+ * 通用导出函数
+ * @param {string} swfPath
+ * @param {string} outputDir
+ * @param {string} exportType 导出类型: "sprite" 或 "shape"
+ * @param {string} format 导出格式: "png" 或 "svg"
+ */
+async function exportByType(swfPath, outputDir, exportType, format = "svg") {
+  const absSwf = path.resolve(swfPath);
+  const absOut = path.resolve(outputDir);
+
+  await fs.mkdir(absOut, { recursive: true });
+
+  const args = [
+    "-format",
+    `${exportType}:${format}`,
+    "-export",
+    exportType,
+    absOut,
+    absSwf,
+  ];
+
+  execSync(`${FFDEC_JAVA} ${FFDEC_CORE_ARGS.join(" ")} ${args.join(" ")}`, {
+    encoding: "utf-8",
+    maxBuffer: 50 * 1024 * 1024,
+    env: { ...process.env, JAVA_TOOL_OPTIONS: JAVA_OPTS },
+    windowsHide: true,
+  });
+
+  return await getExportedFiles(absOut);
 }
 
 /**
@@ -75,32 +119,7 @@ async function exportSprite(
   outputDir,
   { className = "item", chid = 7, format = "svg" }
 ) {
-  const absSwf = path.resolve(swfPath);
-  const absOut = path.resolve(outputDir);
-
-  await fs.mkdir(absOut, { recursive: true });
-
-  if (!className && typeof chid !== "number") {
-    throw new Error("exportSprite 需要 className 或 chid 其中之一");
-  }
-
-  const args = [
-    "-format",
-    `sprite:${format}`,
-    "-export",
-    "sprite",
-    absOut,
-    absSwf,
-  ];
-
-  execSync(`"${FFDEC_PATH}" ${args.join(" ")}`, {
-    encoding: "utf-8",
-    maxBuffer: 50 * 1024 * 1024,
-    env: { ...process.env, JAVA_TOOL_OPTIONS: JAVA_OPTS },
-    windowsHide: true,
-  });
-
-  return await getExportedFiles(absOut);
+  return await exportByType(swfPath, outputDir, "sprite", format);
 }
 
 /**
@@ -112,11 +131,16 @@ async function renderSwf(swfPath, outputPath, frame = 1) {
 
   await fs.mkdir(path.dirname(absOut), { recursive: true });
 
-  execSync(`"${FFDEC_PATH}" -render "${absOut}" "${absSwf}" -frame ${frame}`, {
-    encoding: "utf-8",
-    env: { ...process.env, JAVA_TOOL_OPTIONS: JAVA_OPTS },
-    windowsHide: true,
-  });
+  execSync(
+    `${FFDEC_JAVA} ${FFDEC_CORE_ARGS.join(
+      " "
+    )} -render "${absOut}" "${absSwf}" -frame ${frame}`,
+    {
+      encoding: "utf-8",
+      env: { ...process.env, JAVA_TOOL_OPTIONS: JAVA_OPTS },
+      windowsHide: true,
+    }
+  );
 
   return absOut;
 }
@@ -138,9 +162,17 @@ async function exportImages(swfPath, outputDir, id, options = {}) {
   }
 
   const tempDir = path.join(outputDir, `_temp_${id}`);
+  const format = options.format || "svg";
 
   try {
-    const files = await exportSprite(swfPath, tempDir, options);
+    let files = await exportSprite(swfPath, tempDir, options);
+
+    if (!files.length) {
+      logger.info(`sprite 模式无结果，尝试 shape 模式`);
+
+      await fs.rm(tempDir, { recursive: true, force: true }).catch(() => {});
+      files = await exportByType(swfPath, tempDir, "shape", format);
+    }
 
     if (!files.length) {
       const out = path.join(outputDir, `${id}.png`);
@@ -148,16 +180,17 @@ async function exportImages(swfPath, outputDir, id, options = {}) {
       return { files: [out], method: "render" };
     }
 
-    const finalFiles = [];
-    for (let i = 0; i < files.length; i++) {
-      const ext = path.extname(files[i]);
-      const name = files.length === 1 ? `${id}${ext}` : `${id}_${i + 1}${ext}`;
-      const dest = path.join(outputDir, name);
-      await fs.copyFile(files[i], dest);
-      finalFiles.push(dest);
-    }
+    // 只保存最后一张图
+    const lastFile = files[files.length - 1];
+    const ext = path.extname(lastFile);
+    const name = `${id}${ext}`;
+    const dest = path.join(outputDir, name);
+    await fs.copyFile(lastFile, dest);
 
-    return { files: finalFiles, method: "sprite" };
+    return {
+      files: [dest],
+      method: files.length > 1 ? "sprite/shape-last" : "sprite",
+    };
   } finally {
     await fs.rm(tempDir, { recursive: true, force: true }).catch(() => {});
   }
