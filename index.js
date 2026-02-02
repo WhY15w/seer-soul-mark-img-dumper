@@ -145,17 +145,19 @@ async function processId(id, quality = 100, useFfdec = false) {
   try {
     const swfPath = await downloadAndSaveSwf(id);
 
-    const images = await extractAndCompressImages(swfPath, quality);
+    // 全员svg矢量图，注释原生提取部分
 
-    if (images.length > 0) {
-      logger.info(`原生提取到 ${images.length} 张图片`);
-      const savedFiles = await saveImages(images, id, imgDir);
-      logger.success(`序号 ${id} 处理完成，共保存 ${savedFiles.length} 张图片`);
-      return;
-    }
+    // const images = await extractAndCompressImages(swfPath, quality);
+
+    // if (images.length > 0) {
+    //   logger.info(`原生提取到 ${images.length} 张图片`);
+    //   const savedFiles = await saveImages(images, id, imgDir);
+    //   logger.success(`序号 ${id} 处理完成，共保存 ${savedFiles.length} 张图片`);
+    //   return;
+    // }
 
     if (useFfdec) {
-      logger.info(`原生提取无结果，使用 FFDec 精确导出 Sprite`);
+      // logger.info(`原生提取无结果，使用 FFDec 精确导出 Sprite`);
 
       const result = await exportImages(swfPath, imgDir, id, {
         className: "item",
