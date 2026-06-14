@@ -10,7 +10,7 @@ on:
       ids:
         description: 'SWF IDs to dump (e.g., 1-100 or 1,2,3)'
         required: false
-        default: '1-2100'
+        default: '1-2200'
 
 jobs:
   dump:
@@ -47,7 +47,7 @@ jobs:
           if [ -n "${{ github.event.inputs.ids }}" ]; then
             node index.js --ffdec ${{ github.event.inputs.ids }}
           else
-            node index.js --ffdec 1-2100
+            node index.js --ffdec 1-2200
           fi
 
       - name: Commit and push changes
