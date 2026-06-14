@@ -135,8 +135,9 @@ async function checkImageExists(id) {
  * @param {number} quality 图片质量
  * @param {boolean} useFfdec 是否使用 FFDec 导出
  */
-async function processId(id, quality = 100, useFfdec = false) {
-  if (await checkImageExists(id)) {
+async function processId(id, quality = 100, useFfdec = false, force = false) {
+  if (!force && (await checkImageExists(id))) {
+    logger.info(`跳过序号 ${id}（图片已存在）`);
     return;
   }
 
@@ -165,14 +166,14 @@ async function processId(id, quality = 100, useFfdec = false) {
 
       if (result.files.length > 0) {
         logger.success(
-          `序号 ${id} 使用 FFDec 导出完成，共保存 ${result.files.length} 张图片 (方式: ${result.method})`
+          `序号 ${id} 使用 FFDec 导出完成，共保存 ${result.files.length} 张图片 (方式: ${result.method})`,
         );
       } else {
         logger.warn(`序号 ${id} 没有提取到图片`);
       }
     } else {
       logger.warn(
-        `序号 ${id} 没有提取到位图图片（可能是矢量图形），使用 --ffdec 参数启用 FFDec 导出`
+        `序号 ${id} 没有提取到位图图片（可能是矢量图形），使用 --ffdec 参数启用 FFDec 导出`,
       );
     }
   } catch (error) {
@@ -203,10 +204,11 @@ function showHelp() {
   node index.js --ffdec 2052      # 使用 FFDec 导出矢量图形
 
 选项:
-  --ffdec       使用 FFDec 导出（支持矢量图形）
-                需要安装 FFDec: https://github.com/jindrapetrik/jpexs-decompiler
-                可通过环境变量 FFDEC_PATH 指定路径
-  --help, -h    显示帮助信息
+   --ffdec       使用 FFDec 导出（支持矢量图形）
+                 需要安装 FFDec: https://github.com/jindrapetrik/jpexs-decompiler
+                 可通过环境变量 FFDEC_PATH 指定路径
+   --force, -f   即使图片已存在也强制重新提取并覆盖
+   --help, -h    显示帮助信息
 `);
 }
 
@@ -221,7 +223,10 @@ function showHelp() {
 
   // 检查是否使用 FFDec
   const useFfdec = args.includes("--ffdec");
-  const filteredArgs = args.filter((arg) => !arg.startsWith("--"));
+  const force = args.includes("--force") || args.includes("-f");
+  const filteredArgs = args.filter(
+    (arg) => !arg.startsWith("--") && arg !== "-f",
+  );
 
   // 解析序号
   const ids = parseArgs(filteredArgs);
@@ -239,7 +244,7 @@ function showHelp() {
       logger.warn("FFDec 不可用，将仅使用原生提取");
       logger.info("请安装 FFDec 并配置环境变量 FFDEC_PATH");
       logger.info(
-        "下载地址: https://github.com/jindrapetrik/jpexs-decompiler/releases"
+        "下载地址: https://github.com/jindrapetrik/jpexs-decompiler/releases",
       );
     } else {
       logger.success("FFDec 已就绪");
@@ -249,7 +254,7 @@ function showHelp() {
   logger.info(`准备处理 ${ids.length} 个序号: ${ids.join(", ")}`);
 
   for (const id of ids) {
-    await processId(id, 100, useFfdec);
+    await processId(id, 100, useFfdec, force);
     if (ids.length > 1) {
       await new Promise((resolve) => setTimeout(resolve, 5));
     }
