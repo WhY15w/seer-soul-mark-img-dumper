@@ -1,11 +1,18 @@
 {
   "name": "seer-soul-mark-img-dumper",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "赛尔号魂印图标下载 & SWF 提取工具",
+  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node index.js",
-    "dump": "node index.js"
+    "dev": "tsx src/index.ts",
+    "build": "tsup src/index.ts --format esm --out-dir dist --clean",
+    "start": "node dist/index.js",
+    "dump": "tsx src/index.ts",
+    "lint": "biome check src/ tests/",
+    "format": "biome format --write src/ tests/",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +22,14 @@
     "axios": "^1.18.0",
     "jimp": "^1.6.1",
     "pngjs": "^7.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.0",
+    "@types/node": "^22.19.21",
+    "@types/pngjs": "^6.0.5",
+    "tsup": "^8.5.1",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.6"
   }
 }
