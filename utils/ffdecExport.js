@@ -9,7 +9,7 @@ const DEFAULT_FFDEC_JAR = path.resolve(
   __dirname,
   "../ffdec_24.1.2_nightly3395/ffdec.jar"
 );
-const FFDEC_JAR_PATH = process.env.FFDEC_JAR_PATH || DEFAULT_FFDEC_JAR;
+const FFDEC_JAR_PATH = DEFAULT_FFDEC_JAR;
 const FFDEC_CORE_ARGS = ["-jar", FFDEC_JAR_PATH];
 const JAVA_OPTS = "--enable-native-access=ALL-UNNAMED -Xms64m -Xmx512m";
 
