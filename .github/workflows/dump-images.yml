@@ -45,9 +45,9 @@ jobs:
           FFDEC_JAR_PATH: ${{ github.workspace }}/ffdec_24.1.2_nightly3395/ffdec.jar
         run: |
           if [ -n "${{ github.event.inputs.ids }}" ]; then
-            node index.js --ffdec ${{ github.event.inputs.ids }}
+            node dist/index.js --ffdec ${{ github.event.inputs.ids }}
           else
-            node index.js --ffdec 1-2200
+            node dist/index.js --ffdec -f 2099-2200
           fi
 
       - name: Commit and push changes
